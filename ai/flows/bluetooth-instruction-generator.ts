@@ -84,6 +84,6 @@ const instructionFlow = ai.defineFlow(
   },
   async (input) => {
     const { output } = await helmetInstructionSimplifier(input);
-    return output;
+    return output ?? { instructions: 'idle,0' };
   }
 );
